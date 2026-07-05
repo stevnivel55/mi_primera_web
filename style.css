@@ -1,0 +1,130 @@
+/* ☀️ COLORES POR DEFECTO (Modo Claro) */
+:root {
+    --color-fondo: lch(100% 0.01 296.81);
+    --color-texto: rgb(0, 0, 0);
+    --color-caja: #ffffff;
+}
+
+/* 🌙 COLORES EN MODO OSCURO */
+body.dark-mode {
+    --color-fondo: #121212;
+    --color-texto: #ffffff;
+    --color-caja: #1e1e1e;
+}
+
+/* 🆕 Color del texto del error según el modo activo */
+#liError {
+    color: rgb(0, 0, 0); /* Negro en modo claro */
+}
+
+body.dark-mode #liError {
+    color: #ffffff; /* Blanco en modo oscuro */
+}
+
+/* Aplicamos las variables al cuerpo de la web */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s; /* Cambio suave */
+}
+
+h1 {
+    position: absolute;
+    top: 0px;
+    left: 545px;
+    color: var(--color-texto);
+}
+
+p {
+    font-size: 20px;
+    position: absolute;
+    top: 50px;
+    left: 514px;
+    color: var(--color-texto);
+}
+
+img {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Contenedor del buscador */
+.buscador {
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
+/* Estilos para la caja flotante de sugerencias */
+.caja-sugerencias {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-caja);
+    border: 1px solid var(--color-texto); 
+    color: var(--color-texto);
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: none;
+    z-index: 100;
+}
+
+/* Cada elemento de la lista */
+.caja-sugerencias li {
+    padding: 10px;
+    cursor: pointer;
+    color: var(--color-texto);
+    text-align: left;
+    font-size: 14px;
+}
+
+/* Efecto al pasar el ratón por encima de una sugerencia */
+.caja-sugerencias li:hover {
+    background-color: rgba(128, 128, 128, 0.2); 
+}
+
+/* Botón principal y mensaje */
+#miBoton {
+    position: absolute;
+    top: 145px;
+    left: 600px;
+}
+
+#mensajememe {
+    position: absolute;
+    top: 180px;
+    left: 523px;
+}
+
+/* Hace que la barra donde escribes cambie de color */
+.buscador input {
+    background-color: var(--color-caja);
+    color: var(--color-texto);
+    border: 1px solid var(--color-texto);
+    padding: 5px;
+    border-radius: 5px 0 0 5px; 
+    outline: none; 
+}
+
+/* Hace que el botón de la lupa cambie de color y mantenga todos sus bordes */
+.buscador button {
+    background-color: var(--color-caja);
+    color: var(--color-texto);
+    border: 1px solid var(--color-texto); 
+    padding: 5px 8px;
+    border-radius: 0 5px 5px 0; 
+    cursor: pointer;
+}
