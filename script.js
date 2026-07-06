@@ -6,7 +6,7 @@ boton.addEventListener(newLocal, () => {
     mensaje.textContent = "¡Has hecho clic en el botón!";
     setTimeout(() => {
         mensaje.textContent = "";
-    }, 150000000);
+    }, 1500);
 });
 
 // 1. Lista de recomendaciones (puedes añadir los juegos o frases que quieras aquí)
